@@ -3,7 +3,7 @@ import time
 
 # 1. Ładowanie najnowszego modelu YOLOv26 Nano
 # Ten model jest zoptymalizowany pod kątem szybkości na CPU (idealny na RPi)
-model = YOLO('yolo26n.pt')
+model = YOLO('yolo26n_ncnn_model', task='detect')  # Używamy modelu NCNN zoptymalizowanego dla Raspberry Pi
 
 # 2. Test na standardowym obrazku
 source_img = 'https://ultralytics.com/images/bus.jpg'
